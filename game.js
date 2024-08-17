@@ -58,7 +58,7 @@ function startGame() {
         mines.push(document.getElementById(i.toString()));
     }
 
-    startBtns.addEventListener("click", (event) => {
+    startBtns.addEventListener("click", () => {
         gameOnGoing = true;
         startTime = Date.now() - elapsedTime;
         timerInterval = setInterval(function timer() {
@@ -73,7 +73,7 @@ function startGame() {
     }, {once : true});
 
     mines.forEach(element => {
-        element.addEventListener("click", (event) => {
+        element.addEventListener("click", () => {
             let coords = element.id;
             let x, y;
             if (tileCount === 80) {
@@ -383,11 +383,11 @@ function reset() {
     clickedOnBomb = false;
 
     mines.forEach(element => {
-        element.removeEventListener("click", (event) => {});
-        element.removeEventListener("contextmenu", (event) => {});
+        element.removeEventListener("click", () => {});
+        element.removeEventListener("contextmenu", () => {});
     });
 
-    startBtns.removeEventListener("click", (event) => {});
+    startBtns.removeEventListener("click", () => {});
 
     for (let i= 0; i < tileCount; i++) {
         document.getElementById(i.toString()).classList.remove(...document.getElementById(i.toString()).classList);
