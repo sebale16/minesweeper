@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="easy_style.css">
+    <title>Minesweeper</title>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="bannerContainer">
+            <label for="levels"></label>
+            <select name="levelChange" id="levels">
+                <option value="easy" selected>Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <span id="flag">🚩</span>
+            <span id="mineCounter">10</span>
+            <span id="clock">⏱️</span>
+            <span id="timer">000</span>
+            <span id="recordIcon">🏆</span>
+            <span id="recordTime">--</span>
+        </div>
+        <div id="cellContainer">
+            <div id="0" class="closed_mine"></div>
+            <div id="1" class="closed_mine"></div>
+            <div id="2" class="closed_mine"></div>
+            <div id="3" class="closed_mine"></div>
+            <div id="4" class="closed_mine"></div>
+            <div id="5" class="closed_mine"></div>
+            <div id="6" class="closed_mine"></div>
+            <div id="7" class="closed_mine"></div>
+            <div id="8" class="closed_mine"></div>
+            <div id="9" class="closed_mine"></div>
+            <div id="10" class="closed_mine"></div>
+            <div id="11" class="closed_mine"></div>
+            <div id="12" class="closed_mine"></div>
+            <div id="13" class="closed_mine"></div>
+            <div id="14" class="closed_mine"></div>
+            <div id="15" class="closed_mine"></div>
+            <div id="16" class="closed_mine"></div>
+            <div id="17" class="closed_mine"></div>
+            <div id="18" class="closed_mine"></div>
+            <div id="19" class="closed_mine"></div>
+            <div id="20" class="closed_mine"></div>
+            <div id="21" class="closed_mine"></div>
+            <div id="22" class="closed_mine"></div>
+            <div id="23" class="closed_mine"></div>
+            <div id="24" class="closed_mine"></div>
+            <div id="25" class="closed_mine"></div>
+            <div id="26" class="closed_mine"></div>
+            <div id="27" class="closed_mine"></div>
+            <div id="28" class="closed_mine"></div>
+            <div id="29" class="closed_mine"></div>
+            <div id="30" class="closed_mine"></div>
+            <div id="31" class="closed_mine"></div>
+            <div id="32" class="closed_mine"></div>
+            <div id="33" class="closed_mine"></div>
+            <div id="34" class="closed_mine"></div>
+            <div id="35" class="closed_mine"></div>
+            <div id="36" class="closed_mine"></div>
+            <div id="37" class="closed_mine"></div>
+            <div id="38" class="closed_mine"></div>
+            <div id="39" class="closed_mine"></div>
+            <div id="40" class="closed_mine"></div>
+            <div id="41" class="closed_mine"></div>
+            <div id="42" class="closed_mine"></div>
+            <div id="43" class="closed_mine"></div>
+            <div id="44" class="closed_mine"></div>
+            <div id="45" class="closed_mine"></div>
+            <div id="46" class="closed_mine"></div>
+            <div id="47" class="closed_mine"></div>
+            <div id="48" class="closed_mine"></div>
+            <div id="49" class="closed_mine"></div>
+            <div id="50" class="closed_mine"></div>
+            <div id="51" class="closed_mine"></div>
+            <div id="52" class="closed_mine"></div>
+            <div id="53" class="closed_mine"></div>
+            <div id="54" class="closed_mine"></div>
+            <div id="55" class="closed_mine"></div>
+            <div id="56" class="closed_mine"></div>
+            <div id="57" class="closed_mine"></div>
+            <div id="58" class="closed_mine"></div>
+            <div id="59" class="closed_mine"></div>
+            <div id="60" class="closed_mine"></div>
+            <div id="61" class="closed_mine"></div>
+            <div id="62" class="closed_mine"></div>
+            <div id="63" class="closed_mine"></div>
+            <div id="64" class="closed_mine"></div>
+            <div id="65" class="closed_mine"></div>
+            <div id="66" class="closed_mine"></div>
+            <div id="67" class="closed_mine"></div>
+            <div id="68" class="closed_mine"></div>
+            <div id="69" class="closed_mine"></div>
+            <div id="70" class="closed_mine"></div>
+            <div id="71" class="closed_mine"></div>
+            <div id="72" class="closed_mine"></div>
+            <div id="73" class="closed_mine"></div>
+            <div id="74" class="closed_mine"></div>
+            <div id="75" class="closed_mine"></div>
+            <div id="76" class="closed_mine"></div>
+            <div id="77" class="closed_mine"></div>
+            <div id="78" class="closed_mine"></div>
+            <div id="79" class="closed_mine"></div>
+        </div>
+        <div class="popup_overlay" id="popupOverlay">
+            <div class="popup" id="popup">
+                <div class="popup_content">
+                    <div class="child">
+                        <div id="timeIcon">⏱️</div>
+                        <div id="time">--</div>
+                    </div>
+                    <div class="child">
+                        <div id="bestTimeIcon">🏆</div>
+                        <div id="bestTime">--</div>
+                    </div>
+                    <div id="space"></div>
+                    <button onclick="reset()">Replay</button>
+                </div>
+            </div>
+        </div>
+    <script src="game.js"></script>
+    </div>
+</body>
+</html>
