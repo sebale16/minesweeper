@@ -49,7 +49,7 @@ let visited = [];
 
 
 document.querySelectorAll("[name=levelChange]")[0].addEventListener("change", () => {
-    window.location.href = document.getElementById("levels").value.toLowerCase() + "_level.html";
+    window.location.href = (document.getElementById("levels").value.toLowerCase() === "easy") ? "index.html" : document.getElementById("levels").value.toLowerCase() + "_level.html";
 });
 
 function startGame() {
